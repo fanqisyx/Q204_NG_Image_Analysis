@@ -2,3 +2,6 @@ test/
 temp.jpg
 output.pdf
 temp.png
+main.spec
+dist/
+build/

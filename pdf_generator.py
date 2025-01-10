@@ -106,6 +106,8 @@ def create_pdf(directory, output_pdf, folder_image_count, images_per_folder=6):
 
     # 创建后续页面
     for folder, count in folder_image_count.items():
+        if images_per_folder == 0:
+            break
         subsequent_pages_elements = []  # 每个文件夹一个新的列表
         subsequent_pages_elements.append(Paragraph(f"文件夹: {os.path.relpath(folder, directory)}", styles['Chinese']))
 
@@ -119,7 +121,7 @@ def create_pdf(directory, output_pdf, folder_image_count, images_per_folder=6):
         num_cols = int(num_images ** 0.5) + 1
         num_rows = num_cols * 2
 
-        # 表格高度为页面高度的70%
+        # 表格高度为页面高度的70%，奇数行为平均分后的6/4，偶数行为平均后的2/4
         table_height = 0.7 * A4[1]
         row_height_odd = 2*(3 / 4) * table_height / num_rows
         row_height_even = 2*(1 / 4) * table_height / num_rows
