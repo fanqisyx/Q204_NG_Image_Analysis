@@ -24,8 +24,8 @@ pip install reportlab pillow pyinstaller
 
 1. **克隆项目**：
     ```bash
-    git clone https://github.com/your-repo-name/image-statistics-pdf-generator.git
-    cd image-statistics-pdf-generator
+    git clone https://github.com/fanqisyx/Q204_NG_Image_Analysis.git
+    cd Q204_NG_Image_Analysis
     ```
 
 2. **运行主程序**：
